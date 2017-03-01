@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <SplitPane orientation="VERTICAL" prefHeight="7.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <items>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <bottom>
+                  <MenuBar prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Produits" />
+                        <Menu mnemonicParsing="false" text="Nos promotions" />
+                        <Menu mnemonicParsing="false" text="Actualités" />
+                     </menus>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuBar>
+               </bottom>
+               <center>
+                  <Label text="Produits" BorderPane.alignment="CENTER" />
+               </center>
+               <left>
+                  <ImageView fitHeight="36.0" fitWidth="187.0" nodeOrientation="INHERIT" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@ressources/16667934_10209900843695587_2087153836_o.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </left>
+            </BorderPane>
+         </items>
+      </SplitPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <TextField text="Rechercher..." />
+                <Button mnemonicParsing="false" text="OK" />
+                  <CheckBox mnemonicParsing="false" text="Promos" />
+                  <ChoiceBox prefHeight="26.0" prefWidth="114.0" />
+                  <Slider />
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="75.0" text="REF" />
+                <TableColumn prefWidth="75.0" text="NOM" />
+                  <TableColumn prefWidth="96.0" text="CATEGORIE" />
+                  <TableColumn prefWidth="54.0" text="PRIX" />
+                  <TableColumn prefWidth="133.0" text="DESCRIPTION" />
+                  <TableColumn prefWidth="133.0" text="APERCU" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
