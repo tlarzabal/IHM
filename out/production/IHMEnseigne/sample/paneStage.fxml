@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="797.0" layoutY="100.0" prefHeight="413.0" prefWidth="721.0">
+         <children>
+            <Label prefHeight="30.0" text="Recrutement :" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" text="ID Stage :" underline="true" />
+            <TextField prefHeight="25.0" prefWidth="147.0" />
+            <Label prefHeight="30.0" text="Email :" underline="true" />
+            <TextField />
+            <Label prefHeight="30.0" prefWidth="155.0" text="Informations personnelles :" underline="true" />
+            <TextArea prefHeight="205.0" prefWidth="707.0" />
+            <Button mnemonicParsing="false" text="Envoyer" />
+         </children>
+      </VBox>
+      <TableView layoutX="125.0" layoutY="152.0" prefHeight="317.0" prefWidth="556.0">
+         <columns>
+            <TableColumn prefWidth="96.0" text="ID Stage" />
+            <TableColumn prefWidth="119.0" text="Lieu" />
+            <TableColumn prefWidth="137.0" text="Durée" />
+         </columns>
+      </TableView>
+      <Label layoutX="125.0" layoutY="100.0" prefHeight="30.0" text="Stages développement personnel :" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
