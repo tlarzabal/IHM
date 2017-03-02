@@ -20,7 +20,9 @@ import java.util.List;
 /**
  * Created by dziri on 28/02/17.
  */
-public class Controller {
+public class BaseController {
+
+
     @FXML
     private BorderPane generalBorderPane;
     @FXML
@@ -30,33 +32,10 @@ public class Controller {
     @FXML
     private Label whiteLabel;
     @FXML
-    private ImageView imageAccueil;
-    @FXML
     private ImageView toBeOrToHave;
 
-    private List<String> listeOfImage;
-    private int cpt = 0;
 
-    @FXML
-    public void initialize(){
-        listeOfImage = new ArrayList<>();
-        listeOfImage.add("/images/accueil.png");
-        listeOfImage.add("/images/accueil2.jpg");
-        listeOfImage.add("/images/accueil3.jpg");
-    }
-    public void nextImage(){
-        cpt++;
-        if(cpt == listeOfImage.size())
-            cpt = 0;
-        imageAccueil.setImage(new Image(listeOfImage.get(cpt)));
-    }
 
-    public void beforeImage(){
-        cpt--;
-        if(cpt<0)
-            cpt=listeOfImage.size()-1;
-
-    }
 
 
     public void Accueil() throws IOException {
@@ -79,10 +58,9 @@ public class Controller {
     public void Produits() throws IOException {
         blueLabel.setText("P");
         whiteLabel.setText("roduits");
-        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneProduits.fxml")));
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneCenterProduit.fxml")));
+        generalBorderPane.setLeft(FXMLLoader.load(getClass().getResource("/fxml/paneLeftProduit.fxml")));
     }
 
-    public void toBeOrToHave(){
-        System.out.println("");
-    }
+
 }

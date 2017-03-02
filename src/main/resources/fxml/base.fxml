@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="generalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.Controller">
+<BorderPane fx:id="generalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.BaseController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -60,7 +60,7 @@
                <children>
                   <ImageView fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/LogoCouleurRetoucheBleu.jpg" />
+                        <Image url="@../images/Logo.jpg" />
                      </image>
                   </ImageView>
                   <Label fx:id="whiteLabel" layoutX="905.0" layoutY="21.0" text="ccueil" textAlignment="CENTER" textFill="WHITE">
@@ -75,18 +75,29 @@
                   </Label>
                   <MenuBar fx:id="menuBar" layoutY="130.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;">
                      <menus>
-                        <Menu fx:id="accueil" mnemonicParsing="false" onAction="#Accueil" text="Accueil" />
-                        <Menu fx:id="magasins" mnemonicParsing="false" text="Magasins" />
-                        <Menu fx:id="produits" mnemonicParsing="false" text="Produits">
+                        <Menu fx:id="produits1" mnemonicParsing="false" onAction="#Accueil" onMenuValidation="#Accueil" text="Accueil">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Tous nos produits" onAction="#Stage"/>
-                              <MenuItem mnemonicParsing="false" text="CD" />
-                              <MenuItem mnemonicParsing="false" text="DVD" />
-                              <MenuItem mnemonicParsing="false" text="Livres" />
+                              <MenuItem mnemonicParsing="false" onAction="#Accueil" text="Accueil" />
                            </items>
                         </Menu>
-                        <Menu fx:id="stages" mnemonicParsing="false" onAction="#Stage" text="Stages" />
-                        <Menu mnemonicParsing="false" text="Promotions" />
+                        <Menu fx:id="produits11" mnemonicParsing="false" onAction="#Accueil" onMenuValidation="#Accueil" text="Magasins">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#Accueil" text="Magasins" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="produits" mnemonicParsing="false" onAction="#Produits" onMenuValidation="#Produits" text="Produits">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="Tous nos produits" />
+                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="CD" />
+                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="DVD" />
+                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="Livres" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="produits12" mnemonicParsing="false" onAction="#Stage" onMenuValidation="#Stage" text="Stages">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#Stage" text="Stages" />
+                           </items>
+                        </Menu>
                      </menus>
                   </MenuBar>
                </children>
