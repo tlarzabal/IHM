@@ -30,7 +30,7 @@ public class Controller {
     @FXML
     private Label whiteLabel;
     @FXML
-    private ImageView bienvenue;
+    private ImageView imageAccueil;
     @FXML
     private ImageView toBeOrToHave;
 
@@ -40,14 +40,22 @@ public class Controller {
     @FXML
     public void initialize(){
         listeOfImage = new ArrayList<>();
-        listeOfImage.add("/images/promotion.png");
-        listeOfImage.add("/images/bienvenue.jpg");
+        listeOfImage.add("/images/accueil.png");
+        listeOfImage.add("/images/accueil2.jpg");
+        listeOfImage.add("/images/accueil3.jpg");
     }
-    public void remplaceImage(){
+    public void nextImage(){
         cpt++;
         if(cpt == listeOfImage.size())
             cpt = 0;
-        bienvenue.setImage(new Image(listeOfImage.get(cpt)));
+        imageAccueil.setImage(new Image(listeOfImage.get(cpt)));
+    }
+
+    public void beforeImage(){
+        cpt--;
+        if(cpt<0)
+            cpt=listeOfImage.size()-1;
+
     }
 
 
