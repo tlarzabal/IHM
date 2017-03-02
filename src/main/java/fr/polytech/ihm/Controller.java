@@ -4,10 +4,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +22,21 @@ import java.util.List;
  */
 public class Controller {
     @FXML
+    private BorderPane generalBorderPane;
+    @FXML
+    private MenuBar menuBar;
+    @FXML
+    private Label blueLabel;
+    @FXML
+    private Label whiteLabel;
+    @FXML
     private ImageView bienvenue;
-    private List<String> listeOfImage;
-    private int cpt = 0;
     @FXML
     private ImageView toBeOrToHave;
+
+    private List<String> listeOfImage;
+    private int cpt = 0;
+
     @FXML
     public void initialize(){
         listeOfImage = new ArrayList<>();
@@ -34,20 +49,31 @@ public class Controller {
             cpt = 0;
         bienvenue.setImage(new Image(listeOfImage.get(cpt)));
     }
-    public void produit() throws IOException {
-        Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/produits.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+
+    public void Accueil() throws IOException {
+        blueLabel.setText("A");
+        whiteLabel.setText("ccueil");
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneAccueil.fxml")));
     }
-    public void accueil() throws IOException {
-        Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/accueil.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+    public void Stage() throws IOException {
+        blueLabel.setText("S");
+        whiteLabel.setText("tage");
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneStage.fxml")));
     }
+
+    public void Promotion() throws IOException {
+        blueLabel.setText("P");
+        whiteLabel.setText("romotions");
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/panePromos.fxml")));
+    }
+    public void Produits() throws IOException {
+        blueLabel.setText("P");
+        whiteLabel.setText("roduits");
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneProduits.fxml")));
+    }
+
     public void toBeOrToHave(){
         System.out.println("");
     }

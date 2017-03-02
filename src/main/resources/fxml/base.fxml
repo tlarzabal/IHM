@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.Controller">
+<BorderPane fx:id="generalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.Controller">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -73,26 +73,28 @@
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <MenuBar fx:id="menuBar" layoutY="130.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" >
+                  <MenuBar fx:id="menuBar" layoutY="130.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;">
                      <menus>
-                        <Menu fx:id="accueil" mnemonicParsing="false"  text="Accueil" />
-                        <Menu fx:id="magasins" mnemonicParsing="false"  text="Magasins" />
-                        <Menu fx:id="produits" mnemonicParsing="false"  text="Produits">
+                        <Menu fx:id="accueil" mnemonicParsing="false" onAction="#Accueil" text="Accueil" />
+                        <Menu fx:id="magasins" mnemonicParsing="false" text="Magasins" />
+                        <Menu fx:id="produits" mnemonicParsing="false" text="Produits">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Tous nos produits" />
+                              <MenuItem mnemonicParsing="false" text="Tous nos produits" onAction="#Stage"/>
                               <MenuItem mnemonicParsing="false" text="CD" />
                               <MenuItem mnemonicParsing="false" text="DVD" />
                               <MenuItem mnemonicParsing="false" text="Livres" />
                            </items>
                         </Menu>
-                        <Menu fx:id="stages" mnemonicParsing="false"  text="Stages" />
+                        <Menu fx:id="stages" mnemonicParsing="false" onAction="#Stage" text="Stages" />
                         <Menu mnemonicParsing="false" text="Promotions" />
                      </menus>
                   </MenuBar>
-                  <Button fx:id="button" layoutX="470.0" layoutY="53.0" mnemonicParsing="false" text="Button" />
                </children>
             </Pane>
          </bottom>
       </BorderPane>
    </top>
+   <center>
+      <Pane fx:id="toto" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
