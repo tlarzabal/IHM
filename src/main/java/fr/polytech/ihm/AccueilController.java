@@ -41,6 +41,6 @@ public class AccueilController {
         cpt--;
         if(cpt<0)
             cpt=listeOfImage.size()-1;
-
+        imageAccueil.setImage(new Image(listeOfImage.get(cpt)));
     }
 }
