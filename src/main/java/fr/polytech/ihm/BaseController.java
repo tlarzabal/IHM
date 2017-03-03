@@ -2,10 +2,13 @@ package fr.polytech.ihm;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -20,7 +23,7 @@ import java.util.List;
 /**
  * Created by dziri on 28/02/17.
  */
-public class BaseController {
+public class BaseController extends EmailController {
 
 
     @FXML
@@ -34,7 +37,12 @@ public class BaseController {
     @FXML
     private ImageView toBeOrToHave;
 
-
+/*
+    @FXML
+    private TextField emailField;
+    @FXML
+    private TextArea textField;
+*/
 
 
 
@@ -42,18 +50,19 @@ public class BaseController {
         blueLabel.setText("A");
         whiteLabel.setText("ccueil");
         generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneAccueil.fxml")));
+        generalBorderPane.setLeft(generalBorderPane.getRight());
     }
 
     public void Stage() throws IOException {
         blueLabel.setText("S");
-        whiteLabel.setText("tage");
+        whiteLabel.setText("tages");
         generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneStage.fxml")));
     }
 
-    public void Promotion() throws IOException {
-        blueLabel.setText("P");
-        whiteLabel.setText("romotions");
-        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/panePromos.fxml")));
+    public void Magasins() throws IOException {
+        blueLabel.setText("M");
+        whiteLabel.setText("agasins");
+        //generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/panePromos.fxml")));
     }
     public void Produits() throws IOException {
         blueLabel.setText("P");
@@ -63,4 +72,13 @@ public class BaseController {
     }
 
 
+    public void buttonAccueil() throws IOException{
+        this.Accueil();
+    }
+/*
+    public void sendEmail(){
+        String email ="Email : "+emailField.getText() +"\n" + "Contenu : "+ textField.getText();
+        System.out.println(email);
+    }
+    */
 }
