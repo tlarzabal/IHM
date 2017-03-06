@@ -1,4 +1,4 @@
-package fr.polytech.ihm;
+package fr.polytech.ihm.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,8 +12,6 @@ import java.util.List;
  * Created by Pierre on 02/03/2017.
  */
 public class AccueilController {
-
-
 
     @FXML
     private ImageView imageAccueil;

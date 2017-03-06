@@ -1,11 +1,10 @@
-package fr.polytech.ihm;
+package fr.polytech.ihm.controller;
 
+import fr.polytech.ihm.model.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
-import java.util.Observable;
 
 /**
  * Created by Pierre on 03/03/2017.
