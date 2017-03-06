@@ -62,7 +62,7 @@ public class BaseController extends EmailController {
     public void Magasins() throws IOException {
         blueLabel.setText("M");
         whiteLabel.setText("agasins");
-        //generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/panePromos.fxml")));
+        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasins.fxml")));
     }
     public void Produits() throws IOException {
         blueLabel.setText("P");

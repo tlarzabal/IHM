@@ -80,9 +80,9 @@
                               <MenuItem mnemonicParsing="false" onAction="#Accueil" text="Accueil" />
                            </items>
                         </Menu>
-                        <Menu fx:id="produits11" mnemonicParsing="false" onAction="#Accueil" onMenuValidation="#Accueil" text="Magasins">
+                        <Menu mnemonicParsing="false" onAction="#Magasins" onMenuValidation="#Magasins" text="Magasins">
                            <items>
-                              <MenuItem mnemonicParsing="false" onAction="#Accueil" text="Magasins" />
+                              <MenuItem mnemonicParsing="false" onAction="#Magasins" text="Magasins" />
                            </items>
                         </Menu>
                         <Menu fx:id="produits" mnemonicParsing="false" onAction="#Produits" onMenuValidation="#Produits" text="Produits">
