@@ -1,5 +1,6 @@
-package fr.polytech.ihm;
+package fr.polytech.ihm.controller;
 
+import fr.polytech.ihm.model.Magasin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

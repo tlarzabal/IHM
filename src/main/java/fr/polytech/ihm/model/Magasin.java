@@ -1,4 +1,4 @@
-package fr.polytech.ihm;
+package fr.polytech.ihm.model;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;

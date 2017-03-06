@@ -31,7 +31,9 @@ public class BaseController extends EmailController {
 
     private ObservableList<Produit> produitsObservableList;
 
-    Node Left;
+    private Node Left;
+
+
 /*
     @FXML
     private TextField emailField;
@@ -62,6 +64,7 @@ public class BaseController extends EmailController {
         blueLabel.setText("M");
         whiteLabel.setText("agasins");
         generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasins.fxml")));
+        generalBorderPane.setLeft(Left);
     }
     public void Produits() throws IOException {
         blueLabel.setText("P");
