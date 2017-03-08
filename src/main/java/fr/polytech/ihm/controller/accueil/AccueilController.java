@@ -1,4 +1,4 @@
-package fr.polytech.ihm.controller;
+package fr.polytech.ihm.controller.accueil;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

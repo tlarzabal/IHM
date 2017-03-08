@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="paneIdentification" prefHeight="155.0" prefWidth="203.0" style="-fx-background-color: #002E78;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="21.0" layoutY="14.0" prefHeight="128.0" prefWidth="162.0">
+         <children>
+            <Label prefHeight="30.0" text="Identifiant :" textFill="WHITE" underline="true" />
+            <TextField fx:id="idField" prefHeight="25.0" prefWidth="249.0" />
+            <Label prefHeight="30.0" text="Mot de passe :" textFill="WHITE" underline="true" />
+            <TextField fx:id="mdpField" prefHeight="9.0" prefWidth="356.0" />
+            <Button mnemonicParsing="false" onAction="#sendEmail" prefHeight="0.0" prefWidth="101.0" text="Connection" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

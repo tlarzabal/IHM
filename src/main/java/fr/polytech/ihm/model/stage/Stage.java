@@ -1,4 +1,4 @@
-package fr.polytech.ihm.model;
+package fr.polytech.ihm.model.stage;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;

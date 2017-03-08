@@ -1,6 +1,7 @@
-package fr.polytech.ihm.controller;
+package fr.polytech.ihm.controller.stages;
 
-import fr.polytech.ihm.model.Stage;
+import fr.polytech.ihm.controller.EmailController;
+import fr.polytech.ihm.model.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.scene.control.*;
 public class StageController extends EmailController {
 
     private ObservableList<Stage> stagesData ;
+
 
     @FXML
     private TableView<Stage> stageTable;

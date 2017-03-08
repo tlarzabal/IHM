@@ -1,14 +1,18 @@
-package fr.polytech.ihm.controller;
+package fr.polytech.ihm.controller.base;
 
+import fr.polytech.ihm.controller.EmailController;
 import fr.polytech.ihm.model.produits.Produit;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
@@ -16,6 +20,16 @@ import java.io.IOException;
  * Created by dziri on 28/02/17.
  */
 public class BaseController extends EmailController {
+
+    private boolean isAdmin=false;
+    @FXML
+    private BorderPane borderIdentification;
+    @FXML
+    private TextField idField;
+    @FXML
+    private TextField mdpField;
+
+
 
 
     @FXML
@@ -28,22 +42,24 @@ public class BaseController extends EmailController {
     private Label whiteLabel;
     @FXML
     private ImageView toBeOrToHave;
-
+private Button bouton;
     private ObservableList<Produit> produitsObservableList;
 
     private Node Left;
 
+    public void buttonAdmin() throws IOException{
+        if(idField.getText().equals("ADMIN") && mdpField.getText().equals("0000")){
+            isAdmin=true;
+            borderIdentification.setCenter(FXMLLoader.load(getClass().getResource("/fxml/welcomeAdmin.fxml")));
+        }
 
-/*
-    @FXML
-    private TextField emailField;
-    @FXML
-    private TextArea textField;
-*/
+    }
 
     @FXML
-    public void initialize(){
-        Left=generalBorderPane.getLeft();
+    public void initialize() throws IOException{
+        Left = generalBorderPane.getLeft();
+        if(isAdmin)
+            borderIdentification.setCenter(FXMLLoader.load(getClass().getResource("/fxml/welcomeAdmin.fxml")));
     }
 
     public void Accueil() throws IOException {
@@ -66,6 +82,7 @@ public class BaseController extends EmailController {
         generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasins.fxml")));
         generalBorderPane.setLeft(Left);
     }
+
     public void Produits() throws IOException {
         blueLabel.setText("P");
         whiteLabel.setText("roduits");
@@ -74,13 +91,9 @@ public class BaseController extends EmailController {
     }
 
 
-    public void buttonAccueil() throws IOException{
+    public void buttonAccueil() throws IOException {
         this.Accueil();
     }
-/*
-    public void sendEmail(){
-        String email ="Email : "+emailField.getText() +"\n" + "Contenu : "+ textField.getText();
-        System.out.println(email);
-    }
-    */
+
+
 }

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.StageController">
+<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.stages.StageController">
    <children>
       <VBox layoutX="797.0" layoutY="100.0" prefHeight="413.0" prefWidth="721.0">
          <children>
