@@ -21,13 +21,13 @@ import java.io.IOException;
  */
 public class BaseController extends EmailController {
 
-    private boolean isAdmin=false;
+    private static boolean isAdmin=false;
     @FXML
     private BorderPane borderIdentification;
+
+
     @FXML
-    private TextField idField;
-    @FXML
-    private TextField mdpField;
+    private Button buttonAdmin;
 
 
 
@@ -40,17 +40,17 @@ public class BaseController extends EmailController {
     private Label blueLabel;
     @FXML
     private Label whiteLabel;
-    @FXML
-    private ImageView toBeOrToHave;
-private Button bouton;
-    private ObservableList<Produit> produitsObservableList;
+
 
     private Node Left;
 
     public void buttonAdmin() throws IOException{
-        if(idField.getText().equals("ADMIN") && mdpField.getText().equals("0000")){
+        if(isAdmin){
+            isAdmin=false;
+            buttonAdmin.setText("Connection");
+        }else{
             isAdmin=true;
-            borderIdentification.setCenter(FXMLLoader.load(getClass().getResource("/fxml/welcomeAdmin.fxml")));
+            buttonAdmin.setText("Deconnection");
         }
 
     }
@@ -79,7 +79,10 @@ private Button bouton;
     public void Magasins() throws IOException {
         blueLabel.setText("M");
         whiteLabel.setText("agasins");
-        generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasins.fxml")));
+        if(isAdmin)
+            generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasinsAdmin.fxml")));
+        else
+            generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/paneMagasins.fxml")));
         generalBorderPane.setLeft(Left);
     }
 

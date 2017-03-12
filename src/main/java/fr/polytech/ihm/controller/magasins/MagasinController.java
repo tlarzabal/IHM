@@ -14,10 +14,13 @@ import org.omg.CORBA.Object;
  */
 public class MagasinController {
 
+    public static ObservableList<Magasin> getMagasinsData() {
+        return magasinsData;
+    }
 
-    private ObservableList<Magasin> magasinsData;
+    private  static  ObservableList<Magasin> magasinsData;
     @FXML
-    private TableView<Magasin> magasinTable;
+    protected TableView<Magasin> magasinTable;
     @FXML
     private TableColumn<Magasin, String> magasinColumn;
     @FXML

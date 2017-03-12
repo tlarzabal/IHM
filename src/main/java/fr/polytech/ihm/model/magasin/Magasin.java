@@ -29,6 +29,15 @@ public class Magasin {
         this.email= new SimpleStringProperty(email);
     }
 
+    public Magasin(){
+        this.magasin = new SimpleStringProperty("");
+        this.adresse= new SimpleStringProperty("");
+        this.ville= new SimpleStringProperty("");
+        this.codePostal= new SimpleIntegerProperty(0);
+        this.telephone = new SimpleIntegerProperty(0);
+        this.email= new SimpleStringProperty("");
+    }
+
 
     public String getMagasin() {
         return magasin.get();
