@@ -18,15 +18,27 @@ public class Magasin {
     private  IntegerProperty codePostal;
     private  IntegerProperty telephone;
     private  StringProperty email;
+    private double latitude;
+    private double longitude;
 
 
-    public Magasin(String magasin, String adresse, String ville, int codePostal, int telephone, String email){
+    public Magasin(String magasin, String adresse, String ville, int codePostal, int telephone, String email,double la,double lo){
         this.magasin = new SimpleStringProperty(magasin);
         this.adresse= new SimpleStringProperty(adresse);
         this.ville= new SimpleStringProperty(ville);
         this.codePostal= new SimpleIntegerProperty(codePostal);
         this.telephone = new SimpleIntegerProperty(telephone);
         this.email= new SimpleStringProperty(email);
+        latitude=la;
+        longitude=lo;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
     }
 
     public Magasin(){

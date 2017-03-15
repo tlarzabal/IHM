@@ -56,22 +56,22 @@ public class Singleton {
         chansons.add("Chanson1");
         chansons.add("Chanson2");
         chansons.add("Chanson3");
-        produits.add(new Produit[]{new Livre("John Doe", "images/r.jpg", 1.04, 0, "resumé"),
-                        new Dvd("John Doe", "images/r.jpg", 1.95, 1, "resumé"),
-                        new Cd("John Doe", "images/r.jpg", 1.04, 2, chansons),
-                        new Livre("John Doe", "images/r.jpg", 1.04, 0, "resumé"),
-                        new Dvd(" Doe", "images/r.jpg", 1.95, 1, "resumé")});
+        produits.add(new Produit[]{new Livre("A1", "images/r.jpg", 1.04, 0, "resumé"),
+                        new Dvd("N1", "images/r.jpg", 1.95, 1, "resumé"),
+                        new Cd("P1", "images/r.jpg", 1.04, 2, chansons),
+                        new Livre("A2", "images/r.jpg", 1.04, 0, "resumé"),
+                        new Dvd(" N2", "images/r.jpg", 1.95, 1, "resumé")});
 
-        produits.add(new Produit[]{new Livre("John Doe", "images/r.jpg", 1.04, 0, "resumé"),
-                new Dvd("John Doe", "images/r.jpg", 1.95, 1, "resumé"),
-                new Cd("John Doe", "images/r.jpg", 1.04, 2, chansons),
-                new Livre("John Doe", "images/r.jpg", 1.04, 0, "resumé"),
-                new Dvd(" Doe", "images/r.jpg", 1.95, 1, "resumé")});
+        produits.add(new Produit[]{new Livre("A3", "images/r.jpg", 1.04, 0, "resumé"),
+                new Dvd("N3", "images/r.jpg", 1.95, 1, "resumé"),
+                new Cd("P2", "images/r.jpg", 1.04, 2, chansons),
+                new Livre("A4", "images/r.jpg", 1.04, 0, "resumé"),
+                new Dvd("N4", "images/r.jpg", 1.95, 1, "resumé")});
 
-        magasins.add(new Magasin("EuroDiscount","Zone Saint Philippe","Sophia Antipolis",06410,15485,"0@"));
-        magasins.add(new Magasin("Nice Books","3 rue ","Nice",06000,5858,"1@"));
-        magasins.add(new Magasin("World Book","10 rue Lagrange","Lyon",69000,4549,"fezgfe@"));
-        magasins.add(new Magasin("Forum","11 rue Adolf" ,"Marseille",13000,546,"pierre@"));
+        magasins.add(new Magasin("EuroDiscount","Zone Saint Philippe","Sophia Antipolis",06410,15485,"0@",43.615564,7.071918));
+        magasins.add(new Magasin("Nice Books","3 rue ","Nice",06000,5858,"1@",43.615564,7.071918));
+        magasins.add(new Magasin("World Book","10 rue Lagrange","Lyon",69000,4549,"fezgfe@",43.615564,7.071918));
+        magasins.add(new Magasin("Forum","11 rue Adolf" ,"Marseille",13000,546,"pierre@",43.615564,7.071918));
 
         stages.add(new Stage(156,"12/10/2017","7 jours","EuroDiscount","Paris",75000));
         stages.add(new Stage(105,"22/06/2016","10 jours","Nice Books","Nice",06000));
@@ -99,6 +99,8 @@ public class Singleton {
                     if(compteur==5) {
                         produitsSelectionnes.add(tabProduits);
                         compteur = 0;
+                        tabProduits[0]=null;tabProduits[1]=null;tabProduits[2]=null;
+                        tabProduits[3]=null;tabProduits[4]=null;
                     }
                     tabProduits[compteur] = produit;
                     compteur++;
@@ -115,8 +117,11 @@ public class Singleton {
     public ObservableList<Produit[]> getAllProduits(){return allProduits;}
     public Statistiques[] getStatistiques(){return statistiques;}
     public ObservableList<Stage> getStage(){return stages;}
-    public void setProduits(ObservableList<Produit[]> p){
+    public void setProduitsSelectionne(){
         produits.clear();
-        produits.addAll(p);}
+        System.out.println(produits.size());
+        produits.addAll(produitsSelectionnes);
+        System.out.println(produits.get(0));
+        }
 
 }

@@ -26,7 +26,7 @@ public class RechercheController {
             singleton.addProduitsSelectionnes(1);
         if(checkboxAutres.isSelected())
             singleton.addProduitsSelectionnes(0);
-        singleton.setProduits(singleton.getProduitsSelectionnes());
+        singleton.setProduitsSelectionne();
 
     }
 }

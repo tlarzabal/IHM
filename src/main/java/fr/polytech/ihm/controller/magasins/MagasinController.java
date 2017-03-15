@@ -63,6 +63,7 @@ public class MagasinController {
 
     private GoogleMap map;
 
+    private boolean admin;
 
     @FXML
     public void initialize() {
@@ -71,7 +72,7 @@ public class MagasinController {
     }
 
     public void initialize(boolean admin) {
-
+        this.admin=admin;
         //BarChart=new BarChart<String, Integer>(xAxis,yAxis);
 
         Singleton singleton = Singleton.getInstance();
@@ -90,8 +91,8 @@ public class MagasinController {
         magasinTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showMagasinDetail(newValue));
 
-        if(!admin)
-            googleMapView.addMapInializedListener(() -> configureMap(43.615564,7.071918));
+        //if(!admin)
+            //googleMapView.addMapInializedListener(() -> configureMap(43.615564,7.071918));
     }
 
     public void showMagasinDetail(Magasin magasin) {
@@ -102,7 +103,8 @@ public class MagasinController {
         codePostalLabel.setText(Integer.toString(magasin.getCodePostal()));
         villeLabel.setText(magasin.getVille());
         magasinLabel.setText(magasin.getMagasin());
-        //googleMapView.addMapInializedListener(() -> configureMap(0,0));
+        if (!admin)
+            googleMapView.addMapInializedListener(() -> configureMap(magasin.getLatitude(),magasin.getLongitude()));
     }
 
     protected void configureMap(double latitude,double longitude) {
