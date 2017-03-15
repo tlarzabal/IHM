@@ -45,9 +45,6 @@ public class MagasinController {
     @FXML
     private Label emailLabel;
 
-
-
-
     @FXML
     private GoogleMapView googleMapView;
 
@@ -56,10 +53,8 @@ public class MagasinController {
     @FXML
     private Axis<Integer> yAxis;
 
-
     @FXML
     private BarChart<String, Integer> BarChart;
-
 
     private GoogleMap map;
 
@@ -91,8 +86,8 @@ public class MagasinController {
         magasinTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showMagasinDetail(newValue));
 
-        //if(!admin)
-            //googleMapView.addMapInializedListener(() -> configureMap(43.615564,7.071918));
+        if(!admin)
+            googleMapView.addMapInializedListener(() -> configureMap(43.615564,7.071918));
     }
 
     public void showMagasinDetail(Magasin magasin) {
@@ -116,7 +111,7 @@ public class MagasinController {
         MarkerOptions markerOptions = new MarkerOptions();
         LatLong markerLatLong = new LatLong(latitude, longitude);
         markerOptions.position(markerLatLong)
-                .title("Cap Sophia")
+                .title("Statistique")
                 .animation(Animation.BOUNCE)
                 .visible(true);
         final Marker myMarker = new Marker(markerOptions);

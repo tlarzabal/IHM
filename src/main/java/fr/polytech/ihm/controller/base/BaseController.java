@@ -94,7 +94,7 @@ public class BaseController extends EmailController {
         blueLabel.setText("P");
         whiteLabel.setText("roduits");
         generalBorderPane.setCenter(FXMLLoader.load(getClass().getResource("/fxml/produits/paneProduits.fxml")));
-        generalBorderPane.setLeft(FXMLLoader.load(getClass().getResource("/fxml/produits/paneLeftProduit.fxml")));
+        //generalBorderPane.setLeft(FXMLLoader.load(getClass().getResource("/fxml/produits/paneLeftProduit.fxml")));
     }
 
 

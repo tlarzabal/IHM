@@ -88,9 +88,6 @@
                         <Menu fx:id="produits" mnemonicParsing="false" onAction="#Produits" onMenuValidation="#Produits" text="Produits">
                            <items>
                               <MenuItem mnemonicParsing="false" onAction="#Produits" text="Tous nos produits" />
-                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="CD" />
-                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="DVD" />
-                              <MenuItem mnemonicParsing="false" onAction="#Produits" text="Livres" />
                            </items>
                         </Menu>
                         <Menu fx:id="produits12" mnemonicParsing="false" onAction="#Stage" onMenuValidation="#Stage" text="Stages">

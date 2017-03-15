@@ -16,11 +16,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.stages.StageController">
+<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.stages.StageController">
    <children>
       <VBox layoutX="797.0" layoutY="100.0" prefHeight="413.0" prefWidth="721.0">
          <children>
-            <Label prefHeight="30.0" text="Recrutement :" underline="true">
+            <Label prefHeight="30.0" text="Participer :" underline="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

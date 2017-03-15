@@ -56,22 +56,22 @@ public class Singleton {
         chansons.add("Chanson1");
         chansons.add("Chanson2");
         chansons.add("Chanson3");
-        produits.add(new Produit[]{new Livre("A1", "images/r.jpg", 1.04, 0, "resumé"),
-                        new Dvd("N1", "images/r.jpg", 1.95, 1, "resumé"),
-                        new Cd("P1", "images/r.jpg", 1.04, 2, chansons),
-                        new Livre("A2", "images/r.jpg", 1.04, 0, "resumé"),
-                        new Dvd(" N2", "images/r.jpg", 1.95, 1, "resumé")});
+        produits.add(new Produit[]{new Livre("A1", "images/a.jpg", 1.04, 0, "resumé"),
+                        new Dvd("N1", "images/b.jpg", 1.95, 1, "resumé"),
+                        new Cd("P1", "images/c.jpg", 1.04, 2, chansons),
+                        new Livre("A2", "images/d.jpg", 1.04, 0, "resumé"),
+                        new Dvd(" N2", "images/e.jpg", 1.95, 1, "resumé")});
 
         produits.add(new Produit[]{new Livre("A3", "images/r.jpg", 1.04, 0, "resumé"),
-                new Dvd("N3", "images/r.jpg", 1.95, 1, "resumé"),
+                new Dvd("N3", "images/m.jpg", 1.95, 1, "resumé"),
                 new Cd("P2", "images/r.jpg", 1.04, 2, chansons),
-                new Livre("A4", "images/r.jpg", 1.04, 0, "resumé"),
-                new Dvd("N4", "images/r.jpg", 1.95, 1, "resumé")});
+                new Livre("A4", "images/c.jpg", 1.04, 0, "resumé"),
+                new Dvd("N4", "images/d.jpg", 1.95, 1, "resumé")});
 
         magasins.add(new Magasin("EuroDiscount","Zone Saint Philippe","Sophia Antipolis",06410,15485,"0@",43.615564,7.071918));
-        magasins.add(new Magasin("Nice Books","3 rue ","Nice",06000,5858,"1@",43.615564,7.071918));
-        magasins.add(new Magasin("World Book","10 rue Lagrange","Lyon",69000,4549,"fezgfe@",43.615564,7.071918));
-        magasins.add(new Magasin("Forum","11 rue Adolf" ,"Marseille",13000,546,"pierre@",43.615564,7.071918));
+        magasins.add(new Magasin("Nice Books","3 rue ","Nice",06000,5858,"1@",100.00,7.071918));
+        magasins.add(new Magasin("World Book","10 rue Lagrange","Lyon",69000,4549,"fezgfe@",100.00,7.071918));
+        magasins.add(new Magasin("Forum","11 rue Adolf" ,"Marseille",13000,546,"pierre@",100.00,7.071918));
 
         stages.add(new Stage(156,"12/10/2017","7 jours","EuroDiscount","Paris",75000));
         stages.add(new Stage(105,"22/06/2016","10 jours","Nice Books","Nice",06000));
