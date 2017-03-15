@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.lynden.gmapsfx.GoogleMapView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -13,14 +12,14 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.magasins.MagasinController">
+<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.magasins.MagasinController">
    <children>
-      <Label layoutX="125.0" layoutY="100.0" prefHeight="30.0" text="Nos magasins :" underline="true">
+      <Label layoutX="127.0" layoutY="137.0" prefHeight="30.0" text="Nos magasins :" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="257.0" layoutY="147.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0">
+      <AnchorPane layoutX="257.0" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0">
          <children>
             <SplitPane dividerPositions="0.41304347826086957" layoutX="6.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <items>
@@ -75,5 +74,6 @@
             </SplitPane>
          </children>
       </AnchorPane>
+      <GoogleMapView fx:id="googleMapView" layoutX="948.0" layoutY="137.0" prefHeight="300.0" prefWidth="535.0" />
    </children>
 </Pane>

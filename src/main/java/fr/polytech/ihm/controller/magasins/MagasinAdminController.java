@@ -16,6 +16,12 @@ import java.io.IOException;
 public class MagasinAdminController extends  MagasinController {
 
     @FXML
+    public void initialize(){
+        super.initialize(true);
+        setBarChartLundi();
+    }
+
+    @FXML
     private void handleDeletePerson() {
         int selectedIndex = this.magasinTable.getSelectionModel().getSelectedIndex();
         magasinTable.getItems().remove(selectedIndex);

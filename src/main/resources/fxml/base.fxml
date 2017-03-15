@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="generalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.base.BaseController">
+<BorderPane fx:id="generalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.base.BaseController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -46,7 +46,7 @@
                </image>
             </ImageView>
             <Label layoutX="396.0" layoutY="27.0" prefHeight="17.0" prefWidth="119.0" text="Qui sommes nous ?" textFill="WHITE" />
-            <Hyperlink layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
+            <Hyperlink layoutX="404.0" layoutY="50.0" onAction="#enSavoirPlus" text="En savoir plus" textFill="WHITE" />
          </children>
       </Pane>
    </bottom>

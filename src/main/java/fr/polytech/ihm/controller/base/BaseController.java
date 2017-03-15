@@ -14,7 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
 
 /**
  * Created by dziri on 28/02/17.
@@ -28,9 +30,6 @@ public class BaseController extends EmailController {
 
     @FXML
     private Button buttonAdmin;
-
-
-
 
     @FXML
     private BorderPane generalBorderPane;
@@ -53,6 +52,11 @@ public class BaseController extends EmailController {
             buttonAdmin.setText("Deconnection");
         }
 
+    }
+
+    public void enSavoirPlus() throws  IOException{
+        URI uri = URI.create("https://en.wikipedia.org/wiki/To_Have_or_to_Be%3F");
+        Desktop.getDesktop().browse(uri);
     }
 
     @FXML

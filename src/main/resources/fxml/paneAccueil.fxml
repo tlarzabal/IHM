@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.accueil.AccueilController">
+<Pane prefHeight="594.0" prefWidth="1551.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.accueil.AccueilController">
    <children>
       <ImageView fx:id="imageAccueil" fitHeight="259.0" fitWidth="1554.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/accueil.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="84.0" layoutY="466.0" prefHeight="123.0" prefWidth="1028.0" text="Enseigne créé en 1990, offrant principalement des CD , DVD , livres mais proposant également des stages de développement personnel. Nous proposons un service de livraison inédit en France : livré gratuitement en 24h." wrapText="true">
+      <Label layoutX="84.0" layoutY="466.0" prefHeight="123.0" prefWidth="1028.0" text="Enseigne créée en 1990, offrant principalement des CD , DVD , livres mais proposant également des stages de développement personnel. Nous proposons un service de livraison inédit en France : livré gratuitement en 24h." wrapText="true">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
