@@ -105,7 +105,6 @@ public class Singleton {
                     tabProduits[compteur] = produit;
                     compteur++;
                 }
-                //toto
             }
         }
         produitsSelectionnes.add(tabProduits);
