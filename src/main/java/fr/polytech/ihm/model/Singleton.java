@@ -5,6 +5,7 @@ package fr.polytech.ihm.model;
  */
 
 import fr.polytech.ihm.model.magasin.Magasin;
+import fr.polytech.ihm.model.magasin.Statistiques;
 import fr.polytech.ihm.model.produits.Cd;
 import fr.polytech.ihm.model.produits.Dvd;
 import fr.polytech.ihm.model.produits.Livre;
@@ -19,6 +20,18 @@ import java.util.ArrayList;
  */
 
 public class Singleton {
+
+    private static ObservableList<Produit[]> produits;
+    private static ObservableList<Produit[]> allProduits;
+    private static ObservableList<Produit[]> produitsSelectionnes;
+    private static ObservableList<Magasin> magasins;
+    private static ObservableList<Stage> stages;
+    private Statistiques[] statistiques;
+    /** L'instance statique */
+    private static Singleton instance;
+    private Produit[] tabProduits=new Produit[5];
+    private int compteur=0;
+
 
     /** Récupère l'instance unique de la class Singleton.<p>
      * Remarque : le constructeur est rendu inaccessible
@@ -65,6 +78,11 @@ public class Singleton {
         stages.add(new Stage(105,"22/04/2016","5 jours","World Book","Lyon",69000));
         stages.add(new Stage(105,"05/09/2016","1 mois","Forum","Marseille",13000));
         allProduits.addAll(produits);
+
+        statistiques=new Statistiques[magasins.size()];
+        for(int i=0;i<magasins.size();i++) {
+            statistiques[i]=new Statistiques(magasins.get(i),i*1000+100000,(i+1)*10000);
+        }
     }
 
     public ObservableList<Produit[]> getProduitsSelectionnes(){return produitsSelectionnes;}
@@ -95,17 +113,10 @@ public class Singleton {
     public ObservableList<Magasin> getMagasins(){return magasins;}
 
     public ObservableList<Produit[]> getAllProduits(){return allProduits;}
+    public Statistiques[] getStatistiques(){return statistiques;}
     public ObservableList<Stage> getStage(){return stages;}
     public void setProduits(ObservableList<Produit[]> p){
         produits.clear();
         produits.addAll(p);}
-    private static ObservableList<Produit[]> produits;
-    private static ObservableList<Produit[]> allProduits;
-    private static ObservableList<Produit[]> produitsSelectionnes;
-    private static ObservableList<Magasin> magasins;
-    private static ObservableList<Stage> stages;
-    /** L'instance statique */
-    private static Singleton instance;
-    private Produit[] tabProduits=new Produit[5];
-    private int compteur=0;
+
 }

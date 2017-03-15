@@ -3,6 +3,7 @@ package fr.polytech.ihm.controller.magasins;
 import com.lynden.gmapsfx.javascript.object.*;
 import fr.polytech.ihm.model.Singleton;
 import fr.polytech.ihm.model.magasin.Magasin;
+import fr.polytech.ihm.model.magasin.Statistiques;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.Axis;
@@ -121,30 +122,19 @@ public class MagasinController {
     }
 
 
-    public void setBarChartLundi() {
-        XYChart.Series set = new XYChart.Series<>();
-        for (int i = 1; i < 9; i++) {
-            set.getData().add(new XYChart.Data("" + i, 0));
+    public void setChart() {
+        XYChart.Series setcA = new XYChart.Series<>();
+        setcA.setName("Chiffre d'affaire");
+        XYChart.Series setnbEmp= new XYChart.Series<>();
+        setnbEmp.setName("Coût de la maintenance");
+        Singleton singleton=Singleton.getInstance();
+
+        for (Statistiques statistiques : singleton.getStatistiques()) {
+            setcA.getData().add(new XYChart.Data(statistiques.getMagasinNom(), statistiques.getCa()));
+            setnbEmp.getData().add(new XYChart.Data(statistiques.getMagasinNom(), statistiques.getMaintenance()));
         }
-        set.getData().add(new XYChart.Data("9", 7));
-        set.getData().add(new XYChart.Data("10", 8));
-        set.getData().add(new XYChart.Data("11", 10));
-        set.getData().add(new XYChart.Data("12", 11));
-        set.getData().add(new XYChart.Data("13", 14));
-        set.getData().add(new XYChart.Data("14", 15));
-        set.getData().add(new XYChart.Data("15", 16));
-        set.getData().add(new XYChart.Data("16", 17));
-        set.getData().add(new XYChart.Data("17", 18));
-        set.getData().add(new XYChart.Data("18", 10));
-        set.getData().add(new XYChart.Data("19", 11));
-        set.getData().add(new XYChart.Data("20", 7));
-        set.getData().add(new XYChart.Data("21", 5));
-        set.getData().add(new XYChart.Data("22", 0));
-        set.getData().add(new XYChart.Data("23", 0));
-        set.getData().add(new XYChart.Data("24", 0));
-        BarChart.getData().addAll(set);
+        BarChart.getData().addAll(setcA);
+        BarChart.getData().addAll(setnbEmp);
     }
-
-
 
 }

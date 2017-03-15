@@ -1,9 +1,13 @@
 package fr.polytech.ihm.controller.magasins;
 
+import fr.polytech.ihm.model.Singleton;
 import fr.polytech.ihm.model.magasin.Magasin;
+import fr.polytech.ihm.model.magasin.Statistiques;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -18,7 +22,7 @@ public class MagasinAdminController extends  MagasinController {
     @FXML
     public void initialize(){
         super.initialize(true);
-        setBarChartLundi();
+        setChart();
     }
 
     @FXML
@@ -75,4 +79,5 @@ public class MagasinAdminController extends  MagasinController {
             }
         }
     }
+
 }
