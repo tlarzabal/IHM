@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Created by dziri on 26/02/17.
+ * Created by thibault on 26/02/17.
  */
 public class Main extends Application {
         public static void main(String[] args) { launch(args); }
